@@ -1,25 +1,15 @@
-import logo from "./logo.svg";
+import React from 'react'
+import CardCars from './components/card/CardCars'
+import Container from '@mui/material/Container';
 
-import "./App.css";
+type Props = {}
 
-function App() {
+export default function App({}: Props) {
   return (
-    <div>
-      <div className="app-header">
-        <img src={logo} alt="logo" /> <span>Drivehub</span>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <div>Car list</div>
-        <div>Cart</div>
-      </div>
-      <div className="app-footer">FOOTER</div>
-    </div>
-  );
+   <>
+    <Container maxWidth="xl">
+      <CardCars/>
+    </Container>
+   </>
+  )
 }
-
-export default App;
